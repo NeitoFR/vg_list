@@ -1,0 +1,146 @@
+/* You can add global styles to this file, and also import other style files */
+
+// @import "@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "~@angular/material/theming";
+@include mat-core();
+
+$cesi: (
+  50: #e0f4f2,
+  100: #b3e4de,
+  200: #80d2c8,
+  300: #4dbfb1,
+  400: #26b2a1,
+  500: #00a490,
+  600: #009c88,
+  700: #00927d,
+  800: #008973,
+  900: #007861,
+  A100: #a6ffeb,
+  A200: #73ffdf,
+  A400: #40ffd3,
+  A700: #26ffcd,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
+  )
+);
+$cesi-accent: (
+  50: #f6e0e9,
+  100: #e9b3c9,
+  200: #db80a5,
+  300: #cc4d80,
+  400: #c12665,
+  500: #b6004a,
+  600: #af0043,
+  700: #a6003a,
+  800: #9e0032,
+  900: #8e0022,
+  A100: #ffbac5,
+  A200: #ff879b,
+  A400: #ff5470,
+  A700: #ff3b5b,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #ffffff
+  )
+);
+
+$cesi-warn: (
+    50 : #e5e5e5,
+    100 : #bfbdbe,
+    200 : #949292,
+    300 : #696666,
+    400 : #494546,
+    500 : #231f20,
+    600 : #242021,
+    700 : #1f1b1b,
+    800 : #191616,
+    900 : #0f0d0d,
+    A100 : #ee6767,
+    A200 : #e93a3a,
+    A400 : #ef0000,
+    A700 : #d50000,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+
+
+// @import "../node_modules/material-design-icons/iconfont/material-icons.css";
+
+// "../node_modules/material-design-icons/iconfont/material-icons.css"
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+.toolbar {
+  height: 60px;
+  margin: -8px;
+  display: flex;
+  align-items: center;
+  background-color: #1976d2;
+  color: white;
+  font-weight: 600;
+}
+
+.toolbar img {
+  margin: 0 16px;
+}
+
+.toolbar #twitter-logo {
+  height: 40px;
+  margin: 0 16px;
+}
+
+.toolbar #twitter-logo:hover {
+  opacity: 0.8;
+}
+
+$my-app-primary: mat-palette($cesi);
+$my-app-accent: mat-palette($cesi-accent);
+$my-app-warn: mat-palette($cesi-warn);
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+@include angular-material-theme($my-app-theme);
